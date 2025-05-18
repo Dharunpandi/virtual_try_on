@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Result</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-900 text-white text-center p-10">
+
+    <h1 class="text-3xl font-bold mb-6">Virtual Try-On Result</h1>
+
+    <div class="flex flex-wrap justify-center gap-10">
+        <div>
+            <h2 class="text-xl mb-2">Cloth Image</h2>
+            <img src="{{ url_for('static', filename='uploads/' + cloth_image) }}" class="w-64 h-auto mx-auto rounded-lg" />
+        </div>
+        <div>
+            <h2 class="text-xl mb-2">Model Image</h2>
+            <img src="{{ url_for('static', filename='uploads/' + model_image) }}" class="w-64 h-auto mx-auto rounded-lg" />
+        </div>
+        <div>
+            <h2 class="text-xl mb-2">Output Image</h2>
+            <img src="{{ url_for('static', filename='results/' + output_image) }}" class="w-64 h-auto mx-auto rounded-lg border-2 border-green-500" />
+        </div>
+    </div>
+
+</body>
+</html>
